@@ -1,11 +1,12 @@
 import React from 'react';
+import {FormGroup, ControlLabel, FormControl, InputGroup} from 'react-bootstrap';
 
 // testing purpose only. this should not be here on the final release
 class TextField extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: props.value,
+      value: props.value
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -18,16 +19,18 @@ class TextField extends React.Component {
     this.updateValue(event.target.value);
   }
   updateValue(value) {
-    this.setState({
-      value: value
-    });
+    this.setState({value: value});
   }
   render() {
     return (
-      <div className="textfield-default">
-        <label>{this.props.label}&nbsp;</label>
-        {this.props.prefix}<input {...this.props.htmlAttributes} value={this.state.value} onChange={this.handleChange} /> {this.props.suffix}
-      </div>
+      <FormGroup className="textfield-default" controlId="formControlsText">
+        <ControlLabel>{this.props.label}</ControlLabel>
+        <InputGroup>
+          {this.props.prefix ? <InputGroup.Addon>{this.props.prefix}</InputGroup.Addon> : null}
+            <FormControl {...this.props.htmlAttributes} value={this.state.value} type="text" placeholder="Enter text"/>
+          {this.props.suffix ? <InputGroup.Addon>{this.props.suffix}</InputGroup.Addon> : null}
+        </InputGroup>
+      </FormGroup>
     );
   }
 }

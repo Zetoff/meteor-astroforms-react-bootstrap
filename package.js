@@ -24,9 +24,10 @@ Package.onUse(function(api) {
 //npm dependencies
 api.addFiles('check-npm.js', ['client', 'server']);// using tmeasday:check-npm-versions
 
-api.addFiles('client/main.js', 'client');
+  api.imply('jagi:astronomy');
+  api.imply('zetoff:astroforms-react');
 
- api.export('Astroforms','client');
+  // api.export('Astroforms', 'client');
 
   api.mainModule('lib/main.js',['client','server']);
 });

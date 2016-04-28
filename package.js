@@ -22,7 +22,7 @@ Package.onUse(function(api) {
 //TODO: really need server? If eliminated, does imply that the dependencies will not we executed in the server?
 
 //npm dependencies
-// using tmeasday:check-npm-versions
+api.addFiles('check-npm.js', ['client', 'server']);// using tmeasday:check-npm-versions
 
 api.addFiles('client/main.js', 'client');
 

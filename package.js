@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'zetoff:meteor-astroforms-react-bootstrap',
+  name: 'zetoff:astroforms-react-bootstrap',
   version: '0.0.1',
   // Brief, one-line summary of the package.
   summary: 'Astroforms-React-Bootstrap implmentation',

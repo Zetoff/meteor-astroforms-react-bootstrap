@@ -21,15 +21,30 @@ class TextField extends React.Component {
   updateValue(value) {
     this.setState({value: value});
   }
+
+  renderFormControl(){
+    return(<FormControl {...this.props.htmlAttributes} value={this.state.value} type="text" placeholder="Enter text"/>);
+  }
+  
+  renderFormWithOrWithoutPrefixOrSuffix(){
+    if(this.props.suffix || this.props.prefix){
+return(
+      <InputGroup>
+      {this.props.prefix ? <InputGroup.Addon>{this.props.prefix}</InputGroup.Addon> : null}
+      {this.renderformControl()}
+      {this.props.suffix ? <InputGroup.Addon>{this.props.suffix}</InputGroup.Addon> : null}
+      </InputGroup>
+    );
+  }else{
+    return this.renderformControl();
+  }
+  }
+
   render() {
     return (
       <FormGroup className="textfield-default" controlId="formControlsText">
         <ControlLabel>{this.props.label}</ControlLabel>
-        <InputGroup>
-          {this.props.prefix ? <InputGroup.Addon>{this.props.prefix}</InputGroup.Addon> : null}
-            <FormControl {...this.props.htmlAttributes} value={this.state.value} type="text" placeholder="Enter text"/>
-          {this.props.suffix ? <InputGroup.Addon>{this.props.suffix}</InputGroup.Addon> : null}
-        </InputGroup>
+        {this.renderFormWithOrWithoutPrefixOrSuffix()}
       </FormGroup>
     );
   }

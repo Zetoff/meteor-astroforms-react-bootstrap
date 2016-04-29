@@ -1,7 +1,7 @@
 import React from 'react';
 import {FormGroup, ControlLabel, Checkbox} from 'react-bootstrap';
 
-class CheckBoxComponent extends React.Component {
+class CheckboxComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -36,4 +36,4 @@ class CheckBoxComponent extends React.Component {
 
 }
 
-export default CheckBoxComponent;
+export default CheckboxComponent;

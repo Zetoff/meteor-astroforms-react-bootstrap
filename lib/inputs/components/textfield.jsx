@@ -6,10 +6,7 @@ class TextField extends React.Component {
     super(props);
     this.handleChange = this.handleChange.bind(this);
   }
-  componentWillReceiveProps(props) {
-    // makes component reactive to db changes
-    // this.updateValue(props.value);
-  }
+  
   handleChange(event) {
     this.props.field.update(event.target.value);
   }

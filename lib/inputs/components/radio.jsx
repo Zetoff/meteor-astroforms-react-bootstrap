@@ -9,10 +9,6 @@ class RadioComponent extends React.Component {
     };
     this.handleChange = this.handleChange.bind(this);
   }
-  componentWillReceiveProps(props) {
-    // makes component reactive to db changes
-    this.updateValue(props.value);
-  }
   handleChange(event) {
     //user updates
     this.updateValue(event.target.value);

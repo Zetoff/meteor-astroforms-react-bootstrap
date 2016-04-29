@@ -24,7 +24,7 @@ class CheckboxComponent extends React.Component {
     console.log(this.props);
     return (
       <FormGroup className="checkbox-default" controlId="formControlCheckBox">
-        {/*<ControlLabel>{this.props.label}</ControlLabel>*/}
+        <ControlLabel>{this.props.label}</ControlLabel>
         {this.props.options.map((option) => {
           return (
             <Checkbox value={option.value} key={option.value}>{option.label}</Checkbox>

@@ -1,8 +1,6 @@
 import React from 'react';
 import {FormGroup, ControlLabel, FormControl} from 'react-bootstrap';
 
-
-// testing purpose only. this should not be here on the final release
 class Select extends React.Component {
   constructor(props) {
     super(props);

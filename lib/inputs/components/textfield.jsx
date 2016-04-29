@@ -1,7 +1,6 @@
 import React from 'react';
 import {FormGroup, ControlLabel, FormControl, InputGroup} from 'react-bootstrap';
 
-// testing purpose only. this should not be here on the final release
 class TextField extends React.Component {
   constructor(props) {
     super(props);

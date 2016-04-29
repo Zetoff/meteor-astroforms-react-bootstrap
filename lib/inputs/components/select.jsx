@@ -23,7 +23,7 @@ class Select extends React.Component {
   render() {
     return (
       <FormGroup className="select-default" controlId="formControlsSelect">
-        <ControlLabel>Select</ControlLabel>
+        <ControlLabel>{this.props.label}</ControlLabel>
         <FormControl componentClass="select" {...this.props.htmlAttributes} value={this.state.value} onChange={this.handleChange} placeholder="select">
           {this.props.options.map((option) => {
             return (
